@@ -30,7 +30,7 @@ class FileEntryController extends Controller
         $entry->original_filename = $file->getClientOriginalName();
         $entry->filename = $file->getFileName().'.'.$extension;
         $entry->save();
-        return redirect('fileentry');
+        return redirect()->route('addpic', $entry->filename);
     }
 
     public function get($filename)

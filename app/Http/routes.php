@@ -28,3 +28,11 @@ Route::get('/fileentry/get/{filename}', [
     'as' => 'getentry',
     'uses' => 'FileEntryController@get'
 ]);
+
+Route::get('/pic', 'PicController@index');
+Route::get('/pic/add/{filename}', [
+    'as' => 'addpic',
+    'uses' => 'PicController@add'
+]);
+Route::post('/pic/handleAdd', 'PicController@handleAdd');
+Route::get('/pic/edit/{filename}', 'PicController@edit');
