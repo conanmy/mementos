@@ -16,6 +16,7 @@
         <li>
             <img src="{{route('getentry', $pic->filename)}}" style="width:100px" />
             <p>{{$pic->desc}}</p>
+            <a href="/pic/edit/{{$pic->id}}">Edit</a>
         </li>
         @endforeach
     </ul>

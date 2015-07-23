@@ -32,4 +32,18 @@ class PicController extends Controller
         $pic->save();
         return redirect('pic');
     }
+
+    public function edit($fileid)
+    {
+        $pic = Pic::where('id', '=', $fileid)->firstOrFail();
+        return view('pic.edit', compact('pic'));
+    }
+
+    public function handleEdit()
+    {
+        $pic = Pic::where('id', '=', Request::input('fileid'))->firstOrFail();
+        $pic->desc = Request::input('desc');
+        $pic->save();
+        return redirect('pic');
+    }
 }
