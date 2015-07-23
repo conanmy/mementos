@@ -14,8 +14,12 @@ class PicController extends Controller
 {
     public function index()
     {
-        $pics = Pic::all();
-        return view('pic.index', compact('pics'));
+        if (Auth::check()) {
+            $pics = Pic::where('user_id', '=', Auth::user()->id)->get();
+            return view('pic.index', compact('pics'));
+        } else {
+            return redirect('auth/login');
+        }
     }
 
     public function add($filename)
