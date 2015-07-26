@@ -16,7 +16,6 @@ Route::get('/', function () {
 });
 
 Route::get('/home', 'PagesController@about');
-Route::get('/about', 'PagesController@about');
 
 Route::controllers([
     'auth' => 'Auth\AuthController'
@@ -37,3 +36,9 @@ Route::get('/pic/add/{filename}', [
 Route::post('/pic/handleAdd', 'PicController@handleAdd');
 Route::get('/pic/edit/{picid}', 'PicController@edit');
 Route::post('/pic/handleEdit/', 'PicController@handleEdit');
+
+Route::get('/about', 'AboutController@index');
+Route::get('/about/create', 'AboutController@create');
+Route::get('/about/edit', 'AboutController@edit');
+Route::post('/about/store', 'AboutController@store');
+Route::post('/about/update', 'AboutController@update');
