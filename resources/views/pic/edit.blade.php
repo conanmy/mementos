@@ -2,7 +2,7 @@
 
 @section('content')
 
-<form action="/pic/handleEdit" method="post" enctype="multipart/form-data">
+<form action="/pic/update" method="post" enctype="multipart/form-data">
     {!! csrf_field() !!}
     <img src="{{route('getentry', $pic->filename)}}" style="width:100px" />
     <input type="hidden" name="fileid" value="{{$pic->id}}" />

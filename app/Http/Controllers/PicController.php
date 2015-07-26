@@ -42,7 +42,7 @@ class PicController extends Controller
         return view('pic.edit', compact('pic'));
     }
 
-    public function handleEdit()
+    public function update()
     {
         $pic = Pic::where('id', '=', Request::input('fileid'))->firstOrFail();
         $pic->desc = Request::input('desc');

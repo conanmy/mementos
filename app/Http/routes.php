@@ -35,7 +35,7 @@ Route::get('/pic/add/{filename}', [
 ]);
 Route::post('/pic/store', 'PicController@store');
 Route::get('/pic/edit/{picid}', 'PicController@edit');
-Route::post('/pic/handleEdit/', 'PicController@handleEdit');
+Route::post('/pic/update/', 'PicController@update');
 
 Route::get('/about', 'AboutController@index');
 Route::get('/about/create', 'AboutController@create');
