@@ -33,7 +33,7 @@ Route::get('/pic/add/{filename}', [
     'as' => 'addpic',
     'uses' => 'PicController@add'
 ]);
-Route::post('/pic/handleAdd', 'PicController@handleAdd');
+Route::post('/pic/store', 'PicController@store');
 Route::get('/pic/edit/{picid}', 'PicController@edit');
 Route::post('/pic/handleEdit/', 'PicController@handleEdit');
 

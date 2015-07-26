@@ -26,7 +26,7 @@ class PicController extends Controller
         return view('pic.add', compact('filename'));
     }
 
-    public function handleAdd()
+    public function store()
     {
         $pic = new Pic();
         $pic->filename = Request::input('filename');
