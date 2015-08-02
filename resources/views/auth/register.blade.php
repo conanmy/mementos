@@ -1,3 +1,6 @@
+@extends('master')
+
+@section('content')
 <form method="POST" action="/auth/register">
     {!! csrf_field() !!}
 
@@ -25,3 +28,4 @@
         <button type="submit">Register</button>
     </div>
 </form>
+@stop
