@@ -4,10 +4,14 @@
 
 <form action="/pic/update" method="post" enctype="multipart/form-data">
     {!! csrf_field() !!}
-    <img src="{{route('getentry', $pic->filename)}}" style="width:100px" />
+    <div class="form-group">
+        <img src="{{route('getentry', $pic->filename)}}" class="responsive" />
+    </div>
     <input type="hidden" name="fileid" value="{{$pic->id}}" />
-    <textarea name="desc">{{$pic->desc}}</textarea>
-    <input type="submit" />
+    <div class="form-group">
+        <textarea name="desc" class="form-control">{{$pic->desc}}</textarea>
+    </div>
+    <input type="submit" class="btn btn-default" />
 </form>
 
 @stop

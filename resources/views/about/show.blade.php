@@ -2,6 +2,7 @@
 
 @section('content')
 
-<p>{{$about->about}}<a href="/about/edit">Edit</a></p>
+<p>{{$about->about}}</p>
+<a href="/about/edit" class="btn btn-default">Edit</a>
 
 @stop
