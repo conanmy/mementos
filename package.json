@@ -1,7 +1,7 @@
 {
   "private": true,
   "node": "0.12.x",
-  "scripts": {"postinstall": "gulp production"},
+  "scripts": {"postinstall": "gulp"},
   "devDependencies": {
   },
   "dependencies": {
