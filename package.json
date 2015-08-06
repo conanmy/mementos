@@ -1,6 +1,6 @@
 {
   "private": true,
-  "scripts": {"postinstall": "gulp production"},
+  "scripts": {"postinstall": "gulp"},
   "devDependencies": {
     "gulp": "^3.8.8"
   },
