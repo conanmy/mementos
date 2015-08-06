@@ -1,5 +1,6 @@
 {
   "private": true,
+  "node": "0.12.x",
   "scripts": {"postinstall": "gulp"},
   "devDependencies": {
     "gulp": "^3.8.8"
