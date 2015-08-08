@@ -9,7 +9,7 @@
         <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
             <div class="container">
                 <div class="navbar-header">
-                <a href="/about" class="navbar-brand">Mementos</a>
+                <a class="navbar-brand">Mementos</a>
                 </div>
                 @if (Auth::check())
                 <nav id="bs-navbar" class="collapse navbar-collapse">
